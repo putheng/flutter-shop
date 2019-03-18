@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/product_control.dart';
 import 'package:shop/products.dart';
 
 class ProductManager extends StatefulWidget {
@@ -19,21 +20,19 @@ class _ProductManagerState extends State<ProductManager> {
     super.initState();
   }
 
+  void _addProduct(String product) {
+    setState(() {
+      _products.add(product);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Container(
           margin: EdgeInsets.all(10.0),
-          child: RaisedButton(
-            color: Theme.of(context).primaryColor,
-            onPressed: () {
-              setState(() {
-                _products.add('Advance Food Tester');
-              });
-            },
-            child: Text('Add Produc'),
-          ),
+          child: ProductController(_addProduct)
         ),
         Products(_products)
       ],
