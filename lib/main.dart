@@ -1,32 +1,19 @@
-
 import 'package:flutter/material.dart';
+import 'package:shop/product_manager.dart';
 
-main(){
+main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget{
+class MyApp extends StatelessWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _MyAppState();
-  }
-
-}
-
-class _MyAppState extends State<MyApp>{
-
-  @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: Column(
-            children: <Widget>[
-              
-            ],
-          ),
+        body: ProductManager(),
       ),
     );
   }
