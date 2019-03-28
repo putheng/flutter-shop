@@ -17,9 +17,9 @@ class Products extends StatelessWidget{
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 FlatButton(
-                  onPressed: () => Navigator.push<bool>(
-                    context,
-                    
+                  onPressed: () => Navigator
+                  .pushNamed<bool>(
+                    context, '/product/' + index.toString()
                   ).then((bool value){
                     if(value){
                       deleteProduct(index);
