@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/pages/auth.dart';
 import 'package:shop/pages/product.dart';
 import 'package:shop/pages/products.dart';
 import 'package:shop/pages/products_admin.dart';
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp>{
       ),
       // home: AuthPage(),
       routes: {
-        '/': (BuildContext context) => ProductsPage(_products),
+        '/': (BuildContext context) => AuthPage(),
         '/admin': (BuildContext context) => ProductsAdminPage(_addProduct, _deleteProduct)
       },
       onGenerateRoute: (RouteSettings settings){
