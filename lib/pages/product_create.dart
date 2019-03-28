@@ -16,7 +16,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10.0),
-      child: Column(
+      child: ListView(
         children: <Widget>[
           TextField(
             decoration: InputDecoration(
@@ -50,6 +50,12 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
               });
             },
           ),
+          RaisedButton(
+            child: Text('Save'),
+            onPressed: (){
+              
+            },
+          )
         ],
       ),
     );
